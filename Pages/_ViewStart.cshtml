@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+
+@{
+    var curttime = DateTime.Now.Hour;
+    var curtdate = DateTime.Now.ToShortDateString();
+    string greeting = "Welcome to my E-commerce system Today is ";
+
+    if (curttime < 12)
+    {
+        <text>Good Morning </text> @greeting@: ,  @curtdate
+    }
+    else if (curttime > 12 && curttime < 18)
+    {
+        <text>Good Afternoon </text> @greeting@: ,  @curtdate
+    }
+    else if (curttime > 18)
+    {
+        <text>Good Evening </text> @greeting@: ,  @curtdate
+    }
+}
+
